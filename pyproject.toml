@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "deliveries-manager"
+version = "0.1.0"
+description = ""
+authors = ["aisaev <an.isaev7@gmail.com>"]
+readme = "README.md"
+packages = [{include = "deliveries_manager"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^4.2.2"
+psycopg2-binary = "^2.9.6"
+django-environ = "^0.10.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.3.2"
+isort = "^5.12.0"
+black = "^23.3.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-lenght=120
+target-version=["py310"]
+skip-string-normalization=true
+skip-magic-trailing-coma=true
+exclude ='''
+(
+  /(
+      \.git
+    | \.github
+    | \.venv
+  )/
+)
+'''
