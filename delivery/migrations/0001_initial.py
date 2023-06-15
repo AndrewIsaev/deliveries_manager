@@ -11,71 +11,71 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name="Supplier",
+            name='Supplier',
             fields=[
                 (
-                    "id",
+                    'id',
                     models.BigAutoField(
                         auto_created=True,
                         primary_key=True,
                         serialize=False,
-                        verbose_name="ID",
+                        verbose_name='ID',
                     ),
                 ),
-                ("title", models.CharField(max_length=50)),
-                ("country", models.CharField(max_length=50)),
+                ('title', models.CharField(max_length=50)),
+                ('country', models.CharField(max_length=50)),
             ],
         ),
         migrations.CreateModel(
-            name="Material",
+            name='Material',
             fields=[
                 (
-                    "id",
+                    'id',
                     models.BigAutoField(
                         auto_created=True,
                         primary_key=True,
                         serialize=False,
-                        verbose_name="ID",
+                        verbose_name='ID',
                     ),
                 ),
-                ("sap_number", models.PositiveIntegerField()),
+                ('sap_number', models.PositiveIntegerField()),
                 (
-                    "supplier",
+                    'supplier',
                     models.ForeignKey(
                         on_delete=django.db.models.deletion.CASCADE,
-                        to="delivery.supplier",
+                        to='delivery.supplier',
                     ),
                 ),
             ],
         ),
         migrations.CreateModel(
-            name="Delivery",
+            name='Delivery',
             fields=[
                 (
-                    "id",
+                    'id',
                     models.BigAutoField(
                         auto_created=True,
                         primary_key=True,
                         serialize=False,
-                        verbose_name="ID",
+                        verbose_name='ID',
                     ),
                 ),
-                ("shipment_date", models.DateField()),
-                ("delivery_date", models.DateField()),
-                ("shipment_week", models.PositiveSmallIntegerField()),
-                ("delivery_week", models.PositiveSmallIntegerField()),
+                ('shipment_date', models.DateField()),
+                ('delivery_date', models.DateField()),
+                ('shipment_week', models.PositiveSmallIntegerField()),
+                ('delivery_week', models.PositiveSmallIntegerField()),
                 (
-                    "material",
+                    'material',
                     models.ForeignKey(
                         on_delete=django.db.models.deletion.CASCADE,
-                        to="delivery.material",
+                        to='delivery.material',
                     ),
                 ),
                 (
-                    "supplier",
+                    'supplier',
                     models.ForeignKey(
                         on_delete=django.db.models.deletion.CASCADE,
-                        to="delivery.supplier",
+                        to='delivery.supplier',
                     ),
                 ),
             ],

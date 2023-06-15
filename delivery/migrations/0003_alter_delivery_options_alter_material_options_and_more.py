@@ -5,25 +5,25 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
     dependencies = [
-        ("delivery", "0002_alter_delivery_delivery_date_and_more"),
+        ('delivery', '0002_alter_delivery_delivery_date_and_more'),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name="delivery",
-            options={"verbose_name": "Поставка", "verbose_name_plural": "Поставки"},
+            name='delivery',
+            options={'verbose_name': 'Поставка', 'verbose_name_plural': 'Поставки'},
         ),
         migrations.AlterModelOptions(
-            name="material",
-            options={"verbose_name": "Материал", "verbose_name_plural": "Материалы"},
+            name='material',
+            options={'verbose_name': 'Материал', 'verbose_name_plural': 'Материалы'},
         ),
         migrations.AlterModelOptions(
-            name="supplier",
-            options={"verbose_name": "Поставщик", "verbose_name_plural": "Поставщики"},
+            name='supplier',
+            options={'verbose_name': 'Поставщик', 'verbose_name_plural': 'Поставщики'},
         ),
         migrations.AddField(
-            model_name="material",
-            name="description",
+            model_name='material',
+            name='description',
             field=models.CharField(default=123, max_length=250),
             preserve_default=False,
         ),

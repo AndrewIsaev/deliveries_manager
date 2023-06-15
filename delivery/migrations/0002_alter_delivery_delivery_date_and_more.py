@@ -5,28 +5,28 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
     dependencies = [
-        ("delivery", "0001_initial"),
+        ('delivery', '0001_initial'),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name="delivery",
-            name="delivery_date",
+            model_name='delivery',
+            name='delivery_date',
             field=models.DateField(blank=True, null=True),
         ),
         migrations.AlterField(
-            model_name="delivery",
-            name="delivery_week",
+            model_name='delivery',
+            name='delivery_week',
             field=models.PositiveSmallIntegerField(blank=True, null=True),
         ),
         migrations.AlterField(
-            model_name="delivery",
-            name="shipment_date",
+            model_name='delivery',
+            name='shipment_date',
             field=models.DateField(blank=True, null=True),
         ),
         migrations.AlterField(
-            model_name="delivery",
-            name="shipment_week",
+            model_name='delivery',
+            name='shipment_week',
             field=models.PositiveSmallIntegerField(blank=True, null=True),
         ),
     ]
